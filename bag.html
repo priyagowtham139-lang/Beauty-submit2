@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Bag — Stackly Beauty</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-strip">Free shipping over &#8377;499 &nbsp;&bull;&nbsp; <strong>Flat 20% OFF</strong> on your first order &nbsp;&bull;&nbsp; Easy 15-day returns</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="makeup.html">Makeup</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="haircare.html">Haircare</a>
+      <a href="fragrance.html">Fragrance</a>
+      <a href="men.html">Men</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-btn signin-btn"><i class="fa-regular fa-user"></i><span>Sign In</span></a>
+      <a href="bag.html" class="icon-btn bag-btn"><i class="fa-solid fa-bag-shopping"></i><span>Bag</span><span class="bag-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-top">
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="makeup.html">Makeup <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="skincare.html">Skincare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="haircare.html">Haircare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="fragrance.html">Fragrance <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="men.html">Men <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    <div class="drawer-btns">
+      <a href="login.html" class="btn btn-outline"><i class="fa-regular fa-user"></i> Sign In</a>
+      <a href="bag.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> My Bag</a>
+    </div>
+  </nav>
+</aside>
+
+<main>
+<section class="page-banner section-tight">
+  <div class="container">
+    <div class="eyebrow reveal">Checkout</div>
+    <h1 class="reveal reveal-delay-1">My Bag</h1>
+    <p class="reveal reveal-delay-2">Review your items before checkout.</p>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+
+    <div id="bagEmpty" class="empty-bag" style="display:none;">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <h3>Your bag is empty</h3>
+      <p>Looks like you haven't added anything yet. Let's fix that.</p>
+      <a href="404.html" class="btn btn-primary">Start Shopping <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
+    <div id="bagLayout" class="bag-layout" style="display:none;">
+      <div>
+        <h3 style="font-family:var(--font-display); color:var(--wine-dark); margin-bottom:20px;">
+          <span id="sumItems">0</span> item(s) in your bag
+        </h3>
+        <div id="bagList"></div>
+      </div>
+
+      <div class="summary-card reveal">
+        <h3 style="font-family:var(--font-display); color:var(--wine-dark); margin-bottom:20px;">Order Summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span id="sumSubtotal">&#8377;0</span></div>
+        <div class="summary-row"><span>Discount</span><span id="sumDiscount" style="color:var(--success);">-&#8377;0</span></div>
+        <div class="summary-row"><span>Shipping</span><span id="sumShipping">FREE</span></div>
+        <div class="promo-box">
+          <input type="text" placeholder="Enter promo code">
+          <button class="btn btn-outline btn-sm">Apply</button>
+        </div>
+        <div class="summary-row total"><span>Total</span><span id="sumTotal">&#8377;0</span></div>
+        <button id="checkoutBtn" class="btn btn-primary btn-block" style="margin-top:20px;">
+          Proceed to Checkout <i class="fa-solid fa-lock"></i>
+        </button>
+        <p style="text-align:center; font-size:11.5px; color:var(--ink-soft); margin-top:14px;">
+          <i class="fa-solid fa-shield-halved"></i> 100% secure checkout
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-about">
+      <a href="index.html" class="logo"><img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img"></a>
+      <p>Stackly is India's premium destination for beauty, skincare, haircare and fragrance — curated brands, honest reviews and a community obsessed with self-care.</p>
+      <div class="footer-address"><i class="fa-solid fa-location-dot"></i><span>Koramangala, Bengaluru - 636455</span></div>
+      <div class="footer-address"><i class="fa-solid fa-phone"></i><span>0343-222444</span></div>
+      <div class="footer-address"><i class="fa-solid fa-envelope"></i><span>care@stackly.com</span></div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><div class="footer-acc-head"><h4>Shop</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul><li><a href="404.html">Makeup</a></li><li><a href="404.html">Skincare</a></li><li><a href="404.html">Haircare</a></li><li><a href="404.html">Fragrance</a></li><li><a href="404.html">Men's Grooming</a></li></ul>
+    </div>
+    <div class="footer-col"><div class="footer-acc-head"><h4>Company</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul><li><a href="404.html">About Us</a></li><li><a href="404.html">Careers</a></li><li><a href="404.html">Press</a></li><li><a href="404.html">Stackly Blog</a></li><li><a href="404.html">Sign In</a></li></ul>
+    </div>
+    <div class="footer-col"><div class="footer-acc-head"><h4>Help</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul><li><a href="404.html">Track Order</a></li><li><a href="404.html">Shipping Info</a></li><li><a href="404.html">Returns &amp; Refunds</a></li><li><a href="404.html">FAQs</a></li><li><a href="404.html">Contact Us</a></li></ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 Stackly Beauty. All rights reserved.</span>
+    <div class="pay-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-google-pay"></i><i class="fa-solid fa-wallet"></i></div>
+  </div>
+</footer>
+<button class="to-top" id="toTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>

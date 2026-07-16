@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sign Up — Stackly Beauty</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="makeup.html">Makeup</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="haircare.html">Haircare</a>
+      <a href="fragrance.html">Fragrance</a>
+      <a href="men.html">Men</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-btn signin-btn"><i class="fa-regular fa-user"></i><span>Sign In</span></a>
+      <a href="bag.html" class="icon-btn bag-btn"><i class="fa-solid fa-bag-shopping"></i><span>Bag</span><span class="bag-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-top">
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="makeup.html">Makeup <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="skincare.html">Skincare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="haircare.html">Haircare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="fragrance.html">Fragrance <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="men.html">Men <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    <div class="drawer-btns">
+      <a href="bag.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> My Bag</a>
+    </div>
+  </nav>
+</aside>
+
+<main>
+<div class="login-wrap">
+  <div class="login-visual">
+    <svg viewBox="0 0 400 400" style="position:absolute; opacity:.15; top:-40px; left:-40px;" width="500">
+      <circle cx="200" cy="200" r="190" fill="#E4C77A"/>
+    </svg>
+    <div class="login-visual-inner">
+      <svg width="86" height="86" viewBox="0 0 86 86" class="float-el">
+        <circle cx="43" cy="43" r="42" fill="rgba(255,255,255,.12)"/>
+        <path d="M24 52c4-16 10-26 19-26s15 10 19 26" stroke="#E4C77A" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="43" cy="24" r="6" fill="#E4C77A"/>
+      </svg>
+      <h2>Welcome to Stackly</h2>
+      <p>Create an account to track orders, save your wishlist, and unlock members-only offers on premium beauty.</p>
+    </div>
+  </div>
+
+  <div class="login-form-side">
+    <div class="login-box reveal in-view">
+      <div class="eyebrow">Sign Up</div>
+      <h1 style="font-family:var(--font-display); font-size:30px; color:var(--wine-dark); margin-bottom:6px;">Create your account</h1>
+      <p style="color:var(--ink-soft); font-size:13.5px; margin-bottom:28px;">Fill in the details below to get started.</p>
+
+      <div class="login-error" id="signupError"><i class="fa-solid fa-circle-exclamation"></i> <span></span></div>
+
+      <form id="signupForm" novalidate>
+        <div class="field">
+          <label for="signupName">Full Name</label>
+          <div class="input-wrap">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="signupName" placeholder="Enter your full name" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="signupEmail">Email Address</label>
+          <div class="input-wrap">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="signupEmail" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="signupPass">Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="signupPass" placeholder="Create a password" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="signupConfirmPass">Confirm Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="signupConfirmPass" placeholder="Re-enter your password" required>
+          </div>
+        </div>
+        <div class="field" style="margin-bottom:20px;">
+          <label style="display:flex; align-items:flex-start; gap:8px; color:var(--ink-soft); font-size:13.5px; cursor:pointer;">
+            <input type="checkbox" id="agreeTerms" style="width:auto; margin-top:3px;">
+            <span>I agree to the <a href="404.html" style="color:var(--wine); font-weight:600; text-decoration:underline;">Terms &amp; Conditions</a> and <a href="404.html" style="color:var(--wine); font-weight:600; text-decoration:underline;">Privacy Policy</a></span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-user-plus"></i> Create Account
+        </button>
+      </form>
+
+      <p class="login-alt">Already have an account? <a href="login.html">Sign In</a></p>
+      <a href="index.html" class="btn btn-primary btn-block" style="margin-top:12px; text-align:center;">
+        <i class="fa-solid fa-house"></i> Go Back Home
+      </a>
+    </div>
+  </div>
+</div>
+</main>
+
+<script>
+(function() {
+  var nameInput = document.getElementById('signupName');
+  var emailInput = document.getElementById('signupEmail');
+
+  nameInput.addEventListener('input', function() {
+    var val = this.value;
+    if (/[^a-zA-Z\s]/.test(val)) {
+      alert('Only alphabets are allowed in the name field.');
+      this.value = val.replace(/[^a-zA-Z\s]/g, '');
+    }
+  });
+
+  emailInput.addEventListener('blur', function() {
+    if (this.value && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/i.test(this.value)) {
+      alert('Only Gmail addresses are allowed.');
+      this.value = '';
+      this.focus();
+    }
+  });
+
+  function isStrongPassword(p) {
+    if (p.length < 8) return 'Password must be at least 8 characters long.';
+    if (!/[A-Z]/.test(p)) return 'Password must contain at least one uppercase letter.';
+    if (!/[a-z]/.test(p)) return 'Password must contain at least one lowercase letter.';
+    if (!/[0-9]/.test(p)) return 'Password must contain at least one number.';
+    if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(p)) return 'Password must contain at least one special character.';
+    return '';
+  }
+
+  var passInput = document.getElementById('signupPass');
+  var confirmInput = document.getElementById('signupConfirmPass');
+
+  passInput.addEventListener('blur', function() {
+    if (this.value) {
+      var err = isStrongPassword(this.value);
+      if (err) {
+        alert('Password is not strong enough!\n\n' + err);
+        this.value = '';
+        this.focus();
+      }
+    }
+  });
+
+  confirmInput.addEventListener('blur', function() {
+    if (this.value && this.value !== passInput.value) {
+      alert('Passwords do not match.');
+      this.value = '';
+      this.focus();
+    }
+  });
+
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('signupName').value.trim();
+    var email = document.getElementById('signupEmail').value.trim();
+    var pass = document.getElementById('signupPass').value;
+    var confirmPass = document.getElementById('signupConfirmPass').value;
+    var errorEl = document.getElementById('signupError');
+    var errorSpan = errorEl.querySelector('span');
+
+    if (!name || !email || !pass || !confirmPass) {
+      errorSpan.textContent = 'Please fill in all fields.';
+      errorEl.style.display = 'flex';
+      return;
+    }
+
+    if (!/^[a-zA-Z\s]+$/.test(name)) {
+      errorSpan.textContent = 'Only alphabets are allowed in the name field.';
+      errorEl.style.display = 'flex';
+      return;
+    }
+
+    if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/i.test(email)) {
+      errorSpan.textContent = 'Only Gmail addresses are allowed.';
+      errorEl.style.display = 'flex';
+      return;
+    }
+
+    var passErr = isStrongPassword(pass);
+    if (passErr) {
+      errorSpan.textContent = 'Password is not strong enough. ' + passErr;
+      errorEl.style.display = 'flex';
+      return;
+    }
+
+    if (pass !== confirmPass) {
+      errorSpan.textContent = 'Passwords do not match.';
+      errorEl.style.display = 'flex';
+      return;
+    }
+
+    if (!document.getElementById('agreeTerms').checked) {
+      alert('Please accept Terms and Conditions to proceed.');
+      return;
+    }
+
+    errorEl.style.display = 'none';
+    window.location.href = '404.html';
+  });
+})();
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

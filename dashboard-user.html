@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Account — Stackly Beauty</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" style="display:none;">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+<div class="dash-shell">
+  <aside class="dash-sidebar" id="dashSidebar">
+    <a href="index.html" class="logo" style="display:block; text-align:center; margin-bottom:16px;">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img" style="max-width:140px; margin:0 auto;">
+    </a>
+    <button id="dashSidebarClose" class="dash-sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+    <div class="dash-profile">
+      <div class="dash-avatar">PS</div>
+      <h4>Priya Sharma</h4>
+      <span>Customer</span>
+    </div>
+    <nav class="dash-nav">
+      <a href="dashboard-user.html" class="active"><i class="fa-solid fa-grid-2"></i> Overview</a>
+      <a href="user-orders.html"><i class="fa-solid fa-box"></i> My Orders</a>
+      <a href="user-wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+      <a href="user-addresses.html"><i class="fa-solid fa-location-dot"></i> Addresses</a>
+      <a href="user-settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+    </nav>
+    <div class="dash-logout">
+      <a href="index.html" class="btn btn-outline btn-block" onclick="localStorage.removeItem('stackly_role')"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+  </aside>
+
+  <section class="dash-main">
+    <div class="dash-header-row reveal in-view">
+      <div>
+        <h1>Welcome back, Priya</h1>
+        <p>Here's a quick summary of your Stackly account.</p>
+      </div>
+      <a href="404.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> Continue Shopping</a>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card reveal in-view">
+        <div class="stat-icon"><i class="fa-solid fa-box"></i></div>
+        <strong>12</strong><span>Total Orders</span>
+      </div>
+      <div class="stat-card reveal in-view reveal-delay-1">
+        <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <strong>2</strong><span>In Transit</span>
+      </div>
+      <div class="stat-card reveal in-view reveal-delay-2">
+        <div class="stat-icon"><i class="fa-solid fa-heart"></i></div>
+        <strong>18</strong><span>Wishlist Items</span>
+      </div>
+      <div class="stat-card reveal in-view reveal-delay-3">
+        <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+        <strong>1,240</strong><span>Reward Points</span>
+      </div>
+    </div>
+
+    <div class="dash-panel reveal in-view">
+      <h3>Recent Orders</h3>
+      <div style="overflow-x:auto;">
+      <table class="dash-table">
+        <thead><tr><th>Order ID</th><th>Item</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>#STK4821</td><td>Hyaluronic Glow Serum</td><td>10 Jul 2026</td><td>&#8377;1,199</td><td><span class="status-pill status-delivered">Delivered</span></td></tr>
+          <tr><td>#STK4790</td><td>Velvet Matte Lipstick</td><td>02 Jul 2026</td><td>&#8377;649</td><td><span class="status-pill status-transit">In Transit</span></td></tr>
+          <tr><td>#STK4755</td><td>Argan Anti-Frizz Shampoo</td><td>24 Jun 2026</td><td>&#8377;549</td><td><span class="status-pill status-delivered">Delivered</span></td></tr>
+          <tr><td>#STK4701</td><td>Eau De Parfum, Velvet Oud</td><td>15 Jun 2026</td><td>&#8377;2,899</td><td><span class="status-pill status-pending">Processing</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="dash-panel reveal in-view">
+      <h3>Reward Tier Progress</h3>
+      <p style="font-size:13px; color:var(--ink-soft); margin-bottom:0;">760 points to unlock <strong style="color:var(--wine);">Platinum Tier</strong></p>
+      <div class="progress-bar"><div data-width="62%" style="width:0;"></div></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

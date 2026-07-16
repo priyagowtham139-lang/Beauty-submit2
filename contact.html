@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Contact Us — Stackly Beauty</title>
+<meta name="description" content="Get in touch with Stackly Beauty. Reach out for support, partnerships, or feedback.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-strip">Free shipping over &#8377;499 &nbsp;&bull;&nbsp; <strong>Flat 20% OFF</strong> on your first order &nbsp;&bull;&nbsp; Easy 15-day returns</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="makeup.html">Makeup</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="haircare.html">Haircare</a>
+      <a href="fragrance.html">Fragrance</a>
+      <a href="men.html">Men</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-btn signin-btn"><i class="fa-regular fa-user"></i><span>Sign In</span></a>
+      <a href="bag.html" class="icon-btn bag-btn"><i class="fa-solid fa-bag-shopping"></i><span>Bag</span><span class="bag-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-top">
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="makeup.html">Makeup <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="skincare.html">Skincare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="haircare.html">Haircare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="fragrance.html">Fragrance <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="men.html">Men <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html" class="active">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    <div class="drawer-btns">
+      <a href="login.html" class="btn btn-outline"><i class="fa-regular fa-user"></i> Sign In</a>
+      <a href="bag.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> My Bag</a>
+    </div>
+  </nav>
+</aside>
+
+<main>
+<section class="contact-section" style="padding:80px 0;">
+  <div class="container" style="max-width:900px;">
+    <div class="eyebrow" style="text-align:center;">Get In Touch</div>
+    <h1 style="font-family:var(--font-display); font-size:36px; color:var(--wine-dark); text-align:center; margin-bottom:8px;">Contact Us</h1>
+    <p style="text-align:center; color:var(--ink-soft); margin-bottom:48px; font-size:15px;">Have a question, feedback, or partnership inquiry? We'd love to hear from you.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-form-wrap">
+        <h2 style="font-family:var(--font-display); font-size:22px; color:var(--wine-dark); margin-bottom:20px;">Send us a message</h2>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="contactName">Full Name</label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" id="contactName" placeholder="Your name" required oninput="if(/[^a-zA-Z\s]/.test(this.value)){alert('Only alphabets are allowed to enter'); this.value=this.value.replace(/[^a-zA-Z\s]/g,'');}">
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email Address</label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="contactEmail" placeholder="you@example.com" required onblur="if(this.value && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/i.test(this.value)){alert('Only Gmail addresses are allowed.'); this.value=''; this.focus();}">
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactSubject">Subject</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-tag"></i>
+              <input type="text" id="contactSubject" placeholder="How can we help?" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactMessage">Message</label>
+            <div class="input-wrap" style="align-items:flex-start;">
+              <i class="fa-regular fa-comment" style="margin-top:14px;"></i>
+              <textarea id="contactMessage" rows="5" placeholder="Tell us more..." required style="width:100%; border:none; outline:none; font-family:inherit; font-size:14px; padding:12px 12px 12px 0; resize:vertical; background:transparent;"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:8px;" onclick="event.preventDefault(); window.location.href='404.html';">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info-wrap">
+        <h2 style="font-family:var(--font-display); font-size:22px; color:var(--wine-dark); margin-bottom:20px;">Contact Information</h2>
+        <div style="display:flex; flex-direction:column; gap:24px;">
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <div style="width:44px; height:44px; border-radius:12px; background:var(--blush); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <i class="fa-solid fa-location-dot" style="color:var(--wine); font-size:18px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600; color:var(--ink); margin-bottom:2px;">Address</div>
+              <div style="color:var(--ink-soft); font-size:14px; line-height:1.5;">Koramangala, Bengaluru - 636455</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <div style="width:44px; height:44px; border-radius:12px; background:var(--blush); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <i class="fa-solid fa-phone" style="color:var(--wine); font-size:18px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600; color:var(--ink); margin-bottom:2px;">Phone</div>
+              <div style="color:var(--ink-soft); font-size:14px;">+91 22 4040 1234</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <div style="width:44px; height:44px; border-radius:12px; background:var(--blush); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <i class="fa-solid fa-envelope" style="color:var(--wine); font-size:18px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600; color:var(--ink); margin-bottom:2px;">Email</div>
+              <div style="color:var(--ink-soft); font-size:14px;">care@stackly.com</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:16px; align-items:flex-start;">
+            <div style="width:44px; height:44px; border-radius:12px; background:var(--blush); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <i class="fa-solid fa-clock" style="color:var(--wine); font-size:18px;"></i>
+            </div>
+            <div>
+              <div style="font-weight:600; color:var(--ink); margin-bottom:2px;">Business Hours</div>
+              <div style="color:var(--ink-soft); font-size:14px; line-height:1.5;">Monday – Saturday: 9:00 AM – 7:00 PM<br>Sunday: 10:00 AM – 5:00 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:32px; padding:24px; background:var(--blush); border-radius:16px;">
+          <h3 style="font-family:var(--font-display); font-size:16px; color:var(--wine-dark); margin-bottom:8px;">Follow Us</h3>
+          <div style="display:flex; gap:12px;">
+            <a href="404.html" style="width:40px; height:40px; border-radius:50%; background:var(--wine); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; transition:transform .2s;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" style="width:40px; height:40px; border-radius:50%; background:var(--wine); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; transition:transform .2s;"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" style="width:40px; height:40px; border-radius:50%; background:var(--wine); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; transition:transform .2s;"><i class="fa-brands fa-twitter"></i></a>
+            <a href="404.html" style="width:40px; height:40px; border-radius:50%; background:var(--wine); color:#fff; display:flex; align-items:center; justify-content:center; font-size:16px; transition:transform .2s;"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Why Contact Us -->
+<section class="section" style="background:var(--ivory-2);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">How We Help</div>
+      <h2 class="section-title">Why Reach Out to Us?</h2>
+      <p class="section-sub">Whatever your beauty question or concern, our team is ready to assist you with personalized support.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="feature-card reveal">
+        <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <h3 class="feature-title">Order Support</h3>
+        <p class="feature-desc">Track your order, update delivery details, or resolve any shipping-related queries with our logistics team.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        <h3 class="feature-title">Returns &amp; Refunds</h3>
+        <p class="feature-desc">Need to return a product? We'll guide you through our hassle-free 15-day return and refund process.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
+        <h3 class="feature-title">Product Advice</h3>
+        <p class="feature-desc">Not sure which serum or shade suits you? Our beauty experts help you pick the perfect products.</p>
+      </div>
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3 class="feature-title">Partnerships</h3>
+        <p class="feature-desc">Interested in selling on Stackly or collaborating? Reach out to our business development team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: FAQ -->
+<section class="section">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Got Questions?</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Quick answers to common queries. Can't find what you're looking for? Contact us directly above.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>How do I track my order?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>Once your order is shipped, you'll receive an email and SMS with your tracking ID. You can also log in to your account and check the order status under "My Orders" in your dashboard.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>What is your return policy?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>We offer a 15-day return policy on most items. Products must be unused and in their original packaging. To initiate a return, contact our support team or visit your account dashboard.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>Do you offer free shipping?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>Yes! We offer free shipping on all orders above &#8377;499. For orders below that, a flat shipping fee of &#8377;49 applies across India.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>How can I become a seller on Stackly?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>We're always looking for premium beauty brands to join our platform. Please email us at partnerships@stackly.com with your brand details and our team will get back to you within 48 hours.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span>Are all products authentic?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="faq-a">
+          <p>Absolutely. Every product on Stackly is sourced directly from authorized distributors or the brand itself. We guarantee 100% authenticity on all items.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Testimonials -->
+<section class="section" style="background:var(--blush);">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Customer Love</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-sub">Real stories from real beauty enthusiasts who trust Stackly for their self-care routine.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="testimonial-card reveal">
+        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="testimonial-text">"Had an issue with my delivery and the Stackly support team resolved it within hours. They even added a free sample as a apology. Amazing customer service!"</div>
+        <div class="testimonial-user">
+         
+          <div><div class="testimonial-name">Priya Sharma</div><div class="testimonial-role">Mumbai, Maharashtra</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="testimonial-text">"I was confused about which skincare products to pick for my skin type. The Stackly beauty advisor helped me build a complete routine. My skin has never looked better!"</div>
+        <div class="testimonial-user">
+         
+          <div><div class="testimonial-name">Ananya Reddy</div><div class="testimonial-role">Hyderabad, Telangana</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+        <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+        <div class="testimonial-text">"The return process was so smooth. I ordered the wrong shade and they picked it up from my doorstep and delivered the correct one within 3 days. Love Stackly!"</div>
+        <div class="testimonial-user">
+         
+          <div><div class="testimonial-name">Neha Kapoor</div><div class="testimonial-role">Delhi, NCR</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: CTA Banner -->
+<section class="section" style="background:var(--wine-dark); color:#fff; text-align:center;">
+  <div class="container" style="max-width:640px;">
+    <div class="reveal">
+      <h2 style="font-family:var(--font-display); font-size:32px; margin-bottom:12px; color:#fff;">Stay in the Loop</h2>
+      <p style="font-size:15px; opacity:.85; margin-bottom:28px;">Subscribe to our newsletter for exclusive deals, beauty tips, new arrivals, and insider-only offers delivered straight to your inbox.</p>
+      <form style="display:flex; gap:10px; max-width:480px; margin:0 auto;" class="contact-cta-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email address" required style="flex:1; padding:14px 20px; border-radius:100px; border:none; font-size:14px; font-family:inherit; outline:none;">
+        <button type="submit" class="btn" style="background:var(--gold); color:var(--wine-dark); font-weight:700; white-space:nowrap;">Subscribe <i class="fa-solid fa-chevron-right"></i></button>
+      </form>
+      <p style="font-size:12px; opacity:.6; margin-top:12px;">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-about">
+      <a href="index.html" class="logo">
+        <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+      </a>
+      <p>Stackly is India's premium destination for beauty, skincare, haircare and fragrance — curated brands, honest reviews and a community obsessed with self-care.</p>
+      <div class="footer-address"><i class="fa-solid fa-location-dot"></i><span>Koramangala, Bengaluru - 636455</span></div>
+      <div class="footer-address"><i class="fa-solid fa-phone"></i><span>+91 22 4040 1234</span></div>
+      <div class="footer-address"><i class="fa-solid fa-envelope"></i><span>care@stackly.com</span></div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-acc-head"><h4>Shop</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul>
+        <li><a href="404.html">Makeup</a></li>
+        <li><a href="404.html">Skincare</a></li>
+        <li><a href="404.html">Haircare</a></li>
+        <li><a href="404.html">Fragrance</a></li>
+        <li><a href="404.html">Men's Grooming</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-acc-head"><h4>Company</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul>
+        <li><a href="404.html">About Us</a></li>
+        <li><a href="404.html">Careers</a></li>
+        <li><a href="404.html">Press</a></li>
+        <li><a href="404.html">Stackly Blog</a></li>
+        <li><a href="404.html">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-acc-head"><h4>Help</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul>
+        <li><a href="404.html">Track Order</a></li>
+        <li><a href="404.html">Shipping Info</a></li>
+        <li><a href="404.html">Returns &amp; Refunds</a></li>
+        <li><a href="404.html">FAQs</a></li>
+        <li><a href="404.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 Stackly Beauty. All rights reserved.</span>
+    <div class="pay-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-google-pay"></i><i class="fa-solid fa-wallet"></i></div>
+  </div>
+</footer>
+<button class="to-top" id="toTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>

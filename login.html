@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sign In — Stackly Beauty</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="makeup.html">Makeup</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="haircare.html">Haircare</a>
+      <a href="fragrance.html">Fragrance</a>
+      <a href="men.html">Men</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-btn signin-btn"><i class="fa-regular fa-user"></i><span>Sign In</span></a>
+      <a href="bag.html" class="icon-btn bag-btn"><i class="fa-solid fa-bag-shopping"></i><span>Bag</span><span class="bag-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-top">
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="makeup.html">Makeup <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="skincare.html">Skincare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="haircare.html">Haircare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="fragrance.html">Fragrance <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="men.html">Men <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    <div class="drawer-btns">
+      <a href="bag.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> My Bag</a>
+    </div>
+  </nav>
+</aside>
+
+<main>
+<div class="login-wrap">
+  <div class="login-visual">
+    <svg viewBox="0 0 400 400" style="position:absolute; opacity:.15; top:-40px; left:-40px;" width="500">
+      <circle cx="200" cy="200" r="190" fill="#E4C77A"/>
+    </svg>
+    <div class="login-visual-inner">
+      <svg width="86" height="86" viewBox="0 0 86 86" class="float-el">
+        <circle cx="43" cy="43" r="42" fill="rgba(255,255,255,.12)"/>
+        <path d="M24 52c4-16 10-26 19-26s15 10 19 26" stroke="#E4C77A" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="43" cy="24" r="6" fill="#E4C77A"/>
+      </svg>
+      <h2>Welcome to Stackly</h2>
+      <p>Sign in to track orders, save your wishlist, and unlock members-only offers on premium beauty.</p>
+    </div>
+  </div>
+
+  <div class="login-form-side">
+    <div class="login-box reveal in-view">
+      <div class="eyebrow">Sign In</div>
+      <h1 style="font-family:var(--font-display); font-size:30px; color:var(--wine-dark); margin-bottom:6px;">Login to your account</h1>
+      <p style="color:var(--ink-soft); font-size:13.5px; margin-bottom:28px;">Choose how you'd like to continue.</p>
+
+      <div class="role-toggle">
+        <button type="button" id="roleUser" class="active"><i class="fa-regular fa-user"></i> Customer</button>
+        <button type="button" id="roleAdmin"><i class="fa-solid fa-user-shield"></i> Admin</button>
+      </div>
+
+      <div class="login-error" id="loginError"><i class="fa-solid fa-circle-exclamation"></i> <span></span></div>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="loginEmail">Email Address</label>
+          <div class="input-wrap">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" id="loginEmail" placeholder="you@example.com" required onblur="if(this.value && !/^[a-zA-Z0-9._%+-]+@gmail\.com$/i.test(this.value)){alert('Only Gmail addresses are allowed.'); this.value=''; this.focus();}">
+          </div>
+        </div>
+        <div class="field">
+          <label for="loginPass">Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="loginPass" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <div class="form-meta">
+          <label style="display:flex; align-items:center; gap:8px; color:var(--ink-soft);"><input type="checkbox" style="width:auto;"> Remember me</label>
+          <a href="404.html">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+      </form>
+
+      <p class="login-alt">New to Stackly? <a href="signup.html">Create an account</a></p>
+      <a href="index.html" class="btn btn-primary btn-block" style="margin-top:12px; text-align:center;">
+        <i class="fa-solid fa-house"></i> Go Back Home
+      </a>
+    </div>
+  </div>
+</div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

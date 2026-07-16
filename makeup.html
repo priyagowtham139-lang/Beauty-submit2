@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Makeup — Stackly Beauty</title>
+<meta name="description" content="Shop premium lipstick, eyeshadow, foundation and makeup brushes at Stackly Beauty.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="announce-strip">Free shipping over &#8377;499 &nbsp;&bull;&nbsp; <strong>Flat 20% OFF</strong> on your first order &nbsp;&bull;&nbsp; Easy 15-day returns</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="makeup.html" class="active">Makeup</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="haircare.html">Haircare</a>
+      <a href="fragrance.html">Fragrance</a>
+      <a href="men.html">Men</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-btn signin-btn"><i class="fa-regular fa-user"></i><span>Sign In</span></a>
+      <a href="bag.html" class="icon-btn bag-btn"><i class="fa-solid fa-bag-shopping"></i><span>Bag</span><span class="bag-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-top">
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-nav">
+      <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="makeup.html" class="active">Makeup <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="skincare.html">Skincare <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="haircare.html">Haircare <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="fragrance.html">Fragrance <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="men.html">Men <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    <div class="drawer-btns">
+      <a href="login.html" class="btn btn-outline"><i class="fa-regular fa-user"></i> Sign In</a>
+      <a href="bag.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> My Bag</a>
+    </div>
+  </nav>
+</aside>
+
+<main>
+
+<section class="makeup-hero" id="makeupHero">
+  <div class="makeup-hero-slideshow" id="makeupHeroSlides">
+    <div class="makeup-slide active">
+      <div class="makeup-slide-backdrop" style="background-image:url('Assets/Makeup1.webp');"></div>
+      <div class="makeup-slide-scrim"></div>
+      <svg class="hero-fx" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+        <circle class="hero-svg-ring" cx="1100" cy="70" r="55" fill="none" stroke="rgba(201,162,75,.5)" stroke-width="2"/>
+        <circle class="hero-svg-ring delay1" cx="1100" cy="70" r="35" fill="none" stroke="rgba(201,162,75,.35)" stroke-width="1.5"/>
+        <circle class="hero-svg-dot" cx="80" cy="440" r="5" fill="#C9A24B" opacity=".7"/>
+        <circle class="hero-svg-dot delay2" cx="1120" cy="420" r="4" fill="#E85D75" opacity=".6"/>
+      </svg>
+    </div>
+    <div class="makeup-slide">
+      <div class="makeup-slide-backdrop" style="background-image:url('Assets/Makeup2.webp');"></div>
+      <div class="makeup-slide-scrim"></div>
+      <svg class="hero-fx" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+        <circle class="hero-svg-ring" cx="100" cy="80" r="50" fill="none" stroke="rgba(247,225,229,.5)" stroke-width="2"/>
+        <circle class="hero-svg-ring delay1" cx="100" cy="80" r="30" fill="none" stroke="rgba(247,225,229,.35)" stroke-width="1.5"/>
+        <circle class="hero-svg-dot" cx="1080" cy="460" r="5" fill="#C9A24B" opacity=".7"/>
+        <circle class="hero-svg-dot delay2" cx="60" cy="440" r="4" fill="#8C3159" opacity=".6"/>
+      </svg>
+    </div>
+    <div class="makeup-slide">
+      <div class="makeup-slide-backdrop" style="background-image:url('Assets/Makeup3.webp');"></div>
+      <div class="makeup-slide-scrim"></div>
+      <svg class="hero-fx" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+        <circle class="hero-svg-ring" cx="1000" cy="440" r="52" fill="none" stroke="rgba(201,162,75,.5)" stroke-width="2"/>
+        <circle class="hero-svg-ring delay1" cx="1000" cy="440" r="32" fill="none" stroke="rgba(201,162,75,.35)" stroke-width="1.5"/>
+        <circle class="hero-svg-dot" cx="120" cy="60" r="5" fill="#E85D75" opacity=".7"/>
+        <circle class="hero-svg-dot delay2" cx="900" cy="50" r="4" fill="#C9A24B" opacity=".6"/>
+      </svg>
+    </div>
+
+    <svg class="makeup-hero-bg-anim" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="mBgG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(255,255,255,.10)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient>
+      </defs>
+      <circle class="hero-bg-blob b1" cx="100" cy="120" r="90" fill="url(#mBgG)"/>
+      <circle class="hero-bg-blob b2" cx="480" cy="300" r="70" fill="rgba(201,162,75,.08)"/>
+      <circle class="hero-bg-blob b3" cx="300" cy="80" r="55" fill="rgba(232,93,117,.08)"/>
+      <circle class="mhero-particle p1" cx="60" cy="250" r="3" fill="#C9A24B" opacity=".5"/>
+      <circle class="mhero-particle p2" cx="200" cy="350" r="2.5" fill="#E85D75" opacity=".45"/>
+      <circle class="mhero-particle p3" cx="400" cy="150" r="3.5" fill="#C9A24B" opacity=".4"/>
+      <circle class="mhero-particle p4" cx="520" cy="280" r="2.5" fill="#F7E1E5" opacity=".45"/>
+      <circle class="mhero-particle p5" cx="150" cy="60" r="3" fill="#E4C77A" opacity=".4"/>
+      <circle class="mhero-particle p6" cx="380" cy="340" r="2.5" fill="#C9A24B" opacity=".45"/>
+    </svg>
+
+    <div class="makeup-hero-slide-content">
+      <div class="eyebrow reveal">Category</div>
+      <h1 class="reveal reveal-delay-1">Makeup that moves<br>with you</h1>
+      <p class="reveal reveal-delay-2">From everyday nude lips to full-glam palettes — explore 150+ makeup brands loved across India.</p>
+      <div class="hero-cta reveal reveal-delay-3">
+        <a href="404.html" class="btn btn-primary">Shop Bestsellers <i class="fa-solid fa-chevron-right"></i></a>
+        <a href="404.html" class="btn btn-ghost-light">Explore Brands</a>
+      </div>
+    </div>
+
+    <button class="makeup-hero-arrow makeup-hero-prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="makeup-hero-arrow makeup-hero-next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="makeup-hero-progress"><div class="makeup-hero-progress-fill"></div></div>
+    <div class="makeup-hero-dots">
+      <button class="makeup-hero-dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="makeup-hero-dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="makeup-hero-dot" data-index="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="grid grid-4" style="grid-template-columns:repeat(4,1fr);">
+      <a href="#trending" class="cat-tile reveal"><img src="Assets/Lips.webp" alt="Lips" class="cat-tile-img"><span class="cat-tile-label">Lips</span></a>
+      <a href="#trending" class="cat-tile reveal reveal-delay-1"><img src="Assets/eye.webp" alt="Eyes" class="cat-tile-img"><span class="cat-tile-label">Eyes</span></a>
+
+      <a href="#trending" class="cat-tile reveal reveal-delay-2"><img src="Assets/Face.webp" alt="Face" class="cat-tile-img"><span class="cat-tile-label">Face</span></a>
+      <a href="#trending" class="cat-tile reveal reveal-delay-3"><img src="Assets/brushes.webp" alt="Brushes & Tools" class="cat-tile-img"><span class="cat-tile-label">Brushes &amp; Tools</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--ivory-2);" id="trending">
+  <div class="container">
+    <div class="filter-bar reveal">
+      <div class="section-head" style="margin-bottom:0;"><div class="eyebrow">Trending</div><h2 class="section-title">Bestselling Makeup</h2></div>
+      <div class="filter-chips">
+        <button class="chip active" data-filter="all">All</button><button class="chip" data-filter="lips">Lips</button><button class="chip" data-filter="eyes">Eyes</button><button class="chip" data-filter="face">Face</button>
+      </div>
+    </div>
+    <div class="grid grid-4">
+      
+      <div class="product-card reveal" data-cat="lips">
+        <div class="product-media"><img src="Assets/liquid_lipstick.webp" alt="Velvet Matte Liquid Lipstick" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        <div class="product-badge">Bestseller</div>
+        <div class="product-info">
+          <div class="product-brand">Rouge Atelier</div>
+          <div class="product-name">Velvet Matte Liquid Lipstick — Rosewood</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.6 (2.3k)</div>
+          <div class="product-price"><span class="price-now">&#8377;649</span><span class="price-old">&#8377;899</span><span class="price-off">28% off</span></div>
+          <button class="add-bag-btn" data-id="mk1" data-name="Velvet Matte Liquid Lipstick — Rosewood" data-brand="Rouge Atelier" data-price="649" data-oldprice="899" data-cat="lipstick"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+      
+      <div class="product-card reveal" data-cat="eyes">
+        <div class="product-media"><img src="Assets/Eyeshadow 1.webp" alt="Eyeshadow Palette" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        <div class="product-badge">New</div>
+        <div class="product-info">
+          <div class="product-brand">Vanity Muse</div>
+          <div class="product-name">9-Shade Eyeshadow Palette — Sunset Edit</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.5 (1.8k)</div>
+          <div class="product-price"><span class="price-now">&#8377;1449</span><span class="price-old">&#8377;1999</span><span class="price-off">27% off</span></div>
+          <button class="add-bag-btn" data-id="mk2" data-name="9-Shade Eyeshadow Palette — Sunset Edit" data-brand="Vanity Muse" data-price="1449" data-oldprice="1999" data-cat="palette"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+      
+      <div class="product-card reveal" data-cat="face">
+        <div class="product-media"><img src="Assets/blush.webp" alt="" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        
+        <div class="product-info">
+          <div class="product-brand">Blush Studio</div>
+          <div class="product-name">Silk Finish Blush Duo Compact</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.4 (980)</div>
+          <div class="product-price"><span class="price-now">&#8377;799</span><span class="price-old">&#8377;1099</span><span class="price-off">27% off</span></div>
+          <button class="add-bag-btn" data-id="mk3" data-name="Silk Finish Blush Duo Compact" data-brand="Blush Studio" data-price="799" data-oldprice="1099" data-cat="brush"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+      
+      <div class="product-card reveal" data-cat="face">
+        <div class="product-media"><img src="Assets/matte_foundation.webp" alt="" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        <div class="product-badge">Bestseller</div>
+        <div class="product-info">
+          <div class="product-brand">Glow Theory</div>
+          <div class="product-name">24Hr Matte Foundation — Medium Tan</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.7 (3.1k)</div>
+          <div class="product-price"><span class="price-now">&#8377;999</span><span class="price-old">&#8377;1399</span><span class="price-off">29% off</span></div>
+          <button class="add-bag-btn" data-id="mk4" data-name="24Hr Matte Foundation — Medium Tan" data-brand="Glow Theory" data-price="999" data-oldprice="1399" data-cat="cream"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+      
+      <div class="product-card reveal" data-cat="lips">
+        <div class="product-media"><img src="Assets/Nude_Lipstick.webp" alt="" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        
+        <div class="product-info">
+          <div class="product-brand">Rouge Atelier</div>
+          <div class="product-name">Satin Nude Lipstick — Cocoa Kiss</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.3 (1.1k)</div>
+          <div class="product-price"><span class="price-now">&#8377;599</span><span class="price-old">&#8377;799</span><span class="price-off">25% off</span></div>
+          <button class="add-bag-btn" data-id="mk5" data-name="Satin Nude Lipstick — Cocoa Kiss" data-brand="Rouge Atelier" data-price="599" data-oldprice="799" data-cat="lipstick"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+      
+      <div class="product-card reveal" data-cat="face">
+        <div class="product-media"><img src="Assets/Precision_Blending_Brush.webp" alt="" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        
+        <div class="product-info">
+          <div class="product-brand">Vanity Muse</div>
+          <div class="product-name">Precision Blending Brush Set (5pc)</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.6 (760)</div>
+          <div class="product-price"><span class="price-now">&#8377;1199</span><span class="price-old">&#8377;1599</span><span class="price-off">25% off</span></div>
+          <button class="add-bag-btn" data-id="mk6" data-name="Precision Blending Brush Set (5pc)" data-brand="Vanity Muse" data-price="1199" data-oldprice="1599" data-cat="brush"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+      
+      <div class="product-card reveal" data-cat="face">
+        <div class="product-media"><img src="Assets/Contour_Highlight_Kit.webp" alt="" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        
+        <div class="product-info">
+          <div class="product-brand">Blush Studio</div>
+          <div class="product-name">Contour &amp; Highlight Kit</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.5 (1.4k)</div>
+          <div class="product-price"><span class="price-now">&#8377;1099</span><span class="price-old">&#8377;1499</span><span class="price-off">27% off</span></div>
+          <button class="add-bag-btn" data-id="mk7" data-name="Contour &amp; Highlight Kit" data-brand="Blush Studio" data-price="1099" data-oldprice="1499" data-cat="palette"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+      
+      <div class="product-card reveal">
+        <div class="product-media"><img src="Assets/Dewy_Setting_Spray.webp" alt="" class="product-media-img"></div>
+        <button class="product-wish" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+        <div class="product-badge">New</div>
+        <div class="product-info">
+          <div class="product-brand">Glow Theory</div>
+          <div class="product-name">Dewy Setting Spray, 100ml</div>
+          <div class="product-rating"><span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span> 4.4 (560)</div>
+          <div class="product-price"><span class="price-now">&#8377;549</span><span class="price-old">&#8377;749</span><span class="price-off">27% off</span></div>
+          <button class="add-bag-btn" data-id="mk8" data-name="Dewy Setting Spray, 100ml" data-brand="Glow Theory" data-price="549" data-oldprice="749" data-cat="cream"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split-feature">
+    <div class="split-media reveal full-glam-media">
+      <img src="Assets/Full_glam.webp" alt="Full Glam Look" class="split-media-img">
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="eyebrow">Editor's Pick</div>
+      <h2 class="section-title">Full-Glam in Under 10 Minutes</h2>
+      <p class="section-sub">Our editors curated a 5-product edit for weekend-ready glam without the guesswork.</p>
+      <ul class="feature-list">
+        <li><i class="fa-solid fa-check"></i> Long-wear, transfer-proof formulas</li>
+        <li><i class="fa-solid fa-check"></i> Beginner-friendly application</li>
+        <li><i class="fa-solid fa-check"></i> Works for all skin tones</li>
+      </ul>
+      <a href="404.html" class="btn btn-primary mt-40">Shop the Edit <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="section brands-bg-section" id="brands">
+  <div class="container">
+    <div class="section-head center reveal"><div class="eyebrow" style="justify-content:center;">Brands</div><h2 class="section-title">Makeup Houses We Love</h2></div>
+    <div class="brand-strip reveal">
+      <span class="brand-name">Rouge Atelier</span><span class="brand-name">Vanity Muse</span><span class="brand-name">Blush Studio</span><span class="brand-name">Glow Theory</span><span class="brand-name">Petal &amp; Pearl</span><span class="brand-name">Noir Cosmetics</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="newsletter reveal">
+      <h2 class="section-title">Get Weekly Makeup Edits</h2>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto;">Tutorials, trends and members-only launches — straight to your inbox.</p>
+      <form class="newsletter-form"><input type="email" placeholder="Enter your email address" required><button type="submit" class="btn btn-primary">Subscribe</button></form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-about">
+      <a href="index.html" class="logo">
+        <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+      </a>
+      <p>Stackly is India's premium destination for beauty, skincare, haircare and fragrance — curated brands, honest reviews and a community obsessed with self-care.</p>
+      <div class="footer-address"><i class="fa-solid fa-location-dot"></i><span>Koramangala, Bengaluru - 636455</span></div>
+      <div class="footer-address"><i class="fa-solid fa-phone"></i><span>0343-222444</span></div>
+      <div class="footer-address"><i class="fa-solid fa-envelope"></i><span>care@stackly.com</span></div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-acc-head"><h4>Shop</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul>
+        <li><a href="404.html">Makeup</a></li>
+        <li><a href="404.html">Skincare</a></li>
+        <li><a href="404.html">Haircare</a></li>
+        <li><a href="404.html">Fragrance</a></li>
+        <li><a href="404.html">Men's Grooming</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-acc-head"><h4>Company</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul>
+        <li><a href="404.html">About Us</a></li>
+        <li><a href="404.html">Careers</a></li>
+        <li><a href="404.html">Press</a></li>
+        <li><a href="404.html">Stackly Blog</a></li>
+        <li><a href="404.html">Sign In</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-acc-head"><h4>Help</h4><i class="fa-solid fa-chevron-down"></i></div>
+      <ul>
+        <li><a href="404.html">Track Order</a></li>
+        <li><a href="404.html">Shipping Info</a></li>
+        <li><a href="404.html">Returns &amp; Refunds</a></li>
+        <li><a href="404.html">FAQs</a></li>
+        <li><a href="404.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; 2026 Stackly Beauty. All rights reserved.</span>
+    <div class="pay-icons"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-google-pay"></i><i class="fa-solid fa-wallet"></i></div>
+  </div>
+</footer>
+<button class="to-top" id="toTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+<script src="js/script.js"></script>
+<script>
+(function(){
+  const hero = document.getElementById('makeupHeroSlides');
+  if(!hero) return;
+  const slides = hero.querySelectorAll('.makeup-slide');
+  const dots = hero.querySelectorAll('.makeup-hero-dot');
+  const fill = hero.querySelector('.makeup-hero-progress-fill');
+  const prev = hero.querySelector('.makeup-hero-prev');
+  const next = hero.querySelector('.makeup-hero-next');
+  let current = 0, interval = 2500, timer, progress;
+
+  function goTo(i){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (i + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    resetProgress();
+  }
+
+  function resetProgress(){
+    clearInterval(progress);
+    fill.style.transition = 'none';
+    fill.style.width = '0%';
+    void fill.offsetWidth;
+    fill.style.transition = 'width ' + interval + 'ms linear';
+    fill.style.width = '100%';
+    clearInterval(timer);
+    timer = setTimeout(function(){ goTo(current + 1); }, interval);
+  }
+
+  prev.addEventListener('click', function(){ goTo(current - 1); });
+  next.addEventListener('click', function(){ goTo(current + 1); });
+  dots.forEach(function(d){
+    d.addEventListener('click', function(){ goTo(parseInt(d.dataset.index)); });
+  });
+
+  hero.addEventListener('mouseenter', function(){ clearInterval(timer); clearInterval(progress); });
+  hero.addEventListener('mouseleave', resetProgress);
+
+  resetProgress();
+})();
+</script>
+</body>
+</html>

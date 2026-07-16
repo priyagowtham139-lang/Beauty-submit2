@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Page Not Found — Stackly Beauty</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="makeup.html">Makeup</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="haircare.html">Haircare</a>
+      <a href="fragrance.html">Fragrance</a>
+      <a href="men.html">Men</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="login.html" class="icon-btn signin-btn"><i class="fa-regular fa-user"></i><span>Sign In</span></a>
+      <a href="bag.html" class="icon-btn bag-btn"><i class="fa-solid fa-bag-shopping"></i><span>Bag</span><span class="bag-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-top">
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">Home <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="makeup.html">Makeup <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="skincare.html">Skincare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="haircare.html">Haircare <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="fragrance.html">Fragrance <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="men.html">Men <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="contact.html">Contact <i class="fa-solid fa-chevron-right"></i></a>
+    <div class="drawer-btns">
+      <a href="login.html" class="btn btn-outline"><i class="fa-regular fa-user"></i> Sign In</a>
+      <a href="bag.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> My Bag</a>
+    </div>
+  </nav>
+</aside>
+
+<main>
+<section class="error-page">
+  <div>
+    <svg width="140" height="140" viewBox="0 0 140 140" style="margin:0 auto 10px;" class="float-el">
+      <circle cx="70" cy="70" r="66" fill="#F7E1E5"/>
+      <path d="M42 82c6-22 16-36 28-36s22 14 28 36" stroke="#6B1E3C" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="70" cy="40" r="9" fill="#C9A24B"/>
+      <circle cx="52" cy="70" r="4" fill="#6B1E3C"/>
+      <circle cx="88" cy="70" r="4" fill="#6B1E3C"/>
+    </svg>
+    <div class="error-code">404</div>
+    <h2>This page took a beauty break</h2>
+    <p>The page you're looking for doesn't exist, has moved, or is coming soon. Let's get you back to discovering something beautiful.</p>
+    <div class="error-actions">
+      <a href="javascript:history.back()" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Go Back</a>
+      <a href="index.html" class="btn btn-outline"><i class="fa-solid fa-house"></i> Back to Home</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

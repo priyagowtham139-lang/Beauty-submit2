@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Admin Dashboard — Stackly Beauty</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" style="display:none;">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+<div class="dash-shell">
+  <aside class="dash-sidebar" id="dashSidebar">
+    <a href="index.html" class="logo" style="display:block; text-align:center; margin-bottom:16px;">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img" style="max-width:140px; margin:0 auto;">
+    </a>
+    <button id="dashSidebarClose" class="dash-sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+    <div class="dash-profile">
+      <div class="dash-avatar">AK</div>
+      <h4>Arjun Kapoor</h4>
+      <span>Administrator</span>
+    </div>
+    <nav class="dash-nav">
+      <a href="dashboard-admin.html" class="active"><i class="fa-solid fa-grid-2"></i> Overview</a>
+      <a href="admin-products.html"><i class="fa-solid fa-box-open"></i> Manage Products</a>
+      <a href="admin-orders.html"><i class="fa-solid fa-receipt"></i> Manage Orders</a>
+      <a href="admin-customers.html"><i class="fa-solid fa-users"></i> Customers</a>
+      <a href="admin-settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+    <div class="dash-logout">
+      <a href="index.html" class="btn btn-outline btn-block" onclick="localStorage.removeItem('stackly_role')"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+  </aside>
+
+  <section class="dash-main">
+    <div class="dash-header-row reveal in-view">
+      <div>
+        <h1>Admin Overview</h1>
+        <p>A quick pulse on Stackly's storefront performance.</p>
+      </div>
+      <a href="404.html" class="btn btn-primary"><i class="fa-solid fa-circle-plus"></i> Add New Product</a>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card reveal in-view">
+        <div class="stat-trend">&#8593; 12.4%</div>
+        <div class="stat-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <strong>&#8377;18.4L</strong><span>Revenue (This Month)</span>
+      </div>
+      <div class="stat-card reveal in-view reveal-delay-1">
+        <div class="stat-trend">&#8593; 8.1%</div>
+        <div class="stat-icon"><i class="fa-solid fa-receipt"></i></div>
+        <strong>3,482</strong><span>Orders Placed</span>
+      </div>
+      <div class="stat-card reveal in-view reveal-delay-2">
+        <div class="stat-trend">&#8593; 4.6%</div>
+        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+        <strong>29.6K</strong><span>Active Customers</span>
+      </div>
+      <div class="stat-card reveal in-view reveal-delay-3">
+        <div class="stat-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <strong>14</strong><span>Low Stock Alerts</span>
+      </div>
+    </div>
+
+    <div class="dash-panel reveal in-view">
+      <h3>Recent Orders</h3>
+      <div style="overflow-x:auto;">
+      <table class="dash-table">
+        <thead><tr><th>Order ID</th><th>Customer</th><th>Item</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>#STK4821</td><td>Priya Sharma</td><td>Hyaluronic Glow Serum</td><td>&#8377;1,199</td><td><span class="status-pill status-delivered">Delivered</span></td></tr>
+          <tr><td>#STK4820</td><td>Rhea Malhotra</td><td>Velvet Oud EDP</td><td>&#8377;2,899</td><td><span class="status-pill status-transit">In Transit</span></td></tr>
+          <tr><td>#STK4819</td><td>Kavya Suresh</td><td>Beard Growth Oil</td><td>&#8377;599</td><td><span class="status-pill status-pending">Processing</span></td></tr>
+          <tr><td>#STK4818</td><td>Aditya Rao</td><td>9-Shade Eyeshadow Palette</td><td>&#8377;1,449</td><td><span class="status-pill status-delivered">Delivered</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <div class="dash-panel reveal in-view">
+      <h3>Top Category Performance</h3>
+      <p style="font-size:13px; color:var(--ink-soft);">Skincare — 41% of total sales</p>
+      <div class="progress-bar"><div data-width="41%" style="width:0;"></div></div>
+      <p style="font-size:13px; color:var(--ink-soft); margin-top:18px;">Makeup — 29% of total sales</p>
+      <div class="progress-bar"><div data-width="29%" style="width:0;"></div></div>
+      <p style="font-size:13px; color:var(--ink-soft); margin-top:18px;">Fragrance — 18% of total sales</p>
+      <div class="progress-bar"><div data-width="18%" style="width:0;"></div></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

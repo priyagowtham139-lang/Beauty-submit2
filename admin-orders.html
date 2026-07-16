@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Orders — Stackly Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" style="display:none;">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+  <div class="dash-shell">
+    <aside class="dash-sidebar" id="dashSidebar">
+      <a href="index.html" class="logo" style="display:block; text-align:center; margin-bottom:16px;">
+        <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img" style="max-width:140px; margin:0 auto;">
+      </a>
+      <button id="dashSidebarClose" class="dash-sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+      <div class="dash-profile">
+        <div class="dash-avatar">AK</div>
+        <h4>Arjun Kapoor</h4>
+        <span>Administrator</span>
+      </div>
+      <nav class="dash-nav">
+        <a href="dashboard-admin.html"><i class="fa-solid fa-grid-2"></i> Overview</a>
+        <a href="admin-products.html"><i class="fa-solid fa-box-open"></i> Manage Products</a>
+        <a href="admin-orders.html" class="active"><i class="fa-solid fa-receipt"></i> Manage Orders</a>
+        <a href="admin-customers.html"><i class="fa-solid fa-users"></i> Customers</a>
+        <a href="admin-settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+      </nav>
+      <div class="dash-logout">
+        <a href="index.html" class="btn btn-outline btn-block" onclick="localStorage.removeItem('stackly_role')"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </div>
+    </aside>
+
+    <section class="dash-main">
+      <div class="dash-header-row reveal in-view">
+        <div>
+          <h2>Manage Orders</h2>
+          <p style="color:var(--ink-soft); margin-top:4px;">Track and manage all customer orders.</p>
+        </div>
+      </div>
+
+      <section class="dash-panel reveal in-view">
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:var(--wine-light); color:var(--wine);"><i class="fa-solid fa-receipt"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Total Orders</span>
+              <span class="stat-value">3,482</span>
+              <span class="stat-trend" style="color:#2e7d32;">&#8593; 8.1%</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background:#e8f5e9; color:#2e7d32;"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Delivered</span>
+              <span class="stat-value">2,891</span>
+              <span class="stat-trend" style="color:#2e7d32;">&#8593; 5.3%</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background:var(--ivory-2); color:var(--gold);"><i class="fa-solid fa-truck"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">In Transit</span>
+              <span class="stat-value">412</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" style="background:#fce4ec; color:#c62828;"><i class="fa-solid fa-ban"></i></div>
+            <div class="stat-info">
+              <span class="stat-label">Cancelled</span>
+              <span class="stat-value">179</span>
+              <span class="stat-trend" style="color:var(--rose);">&#8595; 1.8%</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3>Recent Orders</h3>
+        <div class="dash-table">
+          <table style="width:100%; border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--ivory-2);">
+                <th style="padding:12px 14px; text-align:left; font-size:13px; color:var(--ink-soft); font-weight:600;">Order ID</th>
+                <th style="padding:12px 14px; text-align:left; font-size:13px; color:var(--ink-soft); font-weight:600;">Customer</th>
+                <th style="padding:12px 14px; text-align:left; font-size:13px; color:var(--ink-soft); font-weight:600;">Items</th>
+                <th style="padding:12px 14px; text-align:left; font-size:13px; color:var(--ink-soft); font-weight:600;">Amount</th>
+                <th style="padding:12px 14px; text-align:left; font-size:13px; color:var(--ink-soft); font-weight:600;">Date</th>
+                <th style="padding:12px 14px; text-align:left; font-size:13px; color:var(--ink-soft); font-weight:600;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7841</td>
+                <td style="padding:12px 14px; font-size:14px;">Priya Sharma</td>
+                <td style="padding:12px 14px; font-size:14px;">Vitamin C Serum, Hydra Glow Moisturiser</td>
+                <td style="padding:12px 14px; font-size:14px;">₹2,398</td>
+                <td style="padding:12px 14px; font-size:14px;">03 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7842</td>
+                <td style="padding:12px 14px; font-size:14px;">Rohan Mehta</td>
+                <td style="padding:12px 14px; font-size:14px;">Noir Oud Eau de Parfum</td>
+                <td style="padding:12px 14px; font-size:14px;">₹2,499</td>
+                <td style="padding:12px 14px; font-size:14px;">05 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7843</td>
+                <td style="padding:12px 14px; font-size:14px;">Ananya Desai</td>
+                <td style="padding:12px 14px; font-size:14px;">Velvet Matte Lipstick (x2), Lip Liner Set</td>
+                <td style="padding:12px 14px; font-size:14px;">₹1,947</td>
+                <td style="padding:12px 14px; font-size:14px;">07 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-transit">In Transit</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7844</td>
+                <td style="padding:12px 14px; font-size:14px;">Vikram Joshi</td>
+                <td style="padding:12px 14px; font-size:14px;">Charcoal Detox Face Wash, Beard Oil</td>
+                <td style="padding:12px 14px; font-size:14px;">₹1,098</td>
+                <td style="padding:12px 14px; font-size:14px;">08 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7845</td>
+                <td style="padding:12px 14px; font-size:14px;">Neha Gupta</td>
+                <td style="padding:12px 14px; font-size:14px;">Keratin Repair Hair Mask, Argan Hair Oil</td>
+                <td style="padding:12px 14px; font-size:14px;">₹1,598</td>
+                <td style="padding:12px 14px; font-size:14px;">10 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-transit">In Transit</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7846</td>
+                <td style="padding:12px 14px; font-size:14px;">Kavya Iyer</td>
+                <td style="padding:12px 14px; font-size:14px;">Radiance Vitamin C Serum</td>
+                <td style="padding:12px 14px; font-size:14px;">₹1,299</td>
+                <td style="padding:12px 14px; font-size:14px;">11 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-pending">Processing</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7847</td>
+                <td style="padding:12px 14px; font-size:14px;">Sahil Khan</td>
+                <td style="padding:12px 14px; font-size:14px;">Noir Oud Eau de Parfum, After Shave Balm</td>
+                <td style="padding:12px 14px; font-size:14px;">₹3,148</td>
+                <td style="padding:12px 14px; font-size:14px;">13 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ivory-2);">
+                <td style="padding:12px 14px; font-size:14px;">#ORD-7848</td>
+                <td style="padding:12px 14px; font-size:14px;">Meera Nair</td>
+                <td style="padding:12px 14px; font-size:14px;">Hydra Glow Moisturiser, Rose Face Mist</td>
+                <td style="padding:12px 14px; font-size:14px;">₹1,748</td>
+                <td style="padding:12px 14px; font-size:14px;">15 Jul 2026</td>
+                <td style="padding:12px 14px;"><span class="status-pill status-transit">In Transit</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3>Order Status Breakdown</h3>
+        <div style="margin-top:16px;">
+          <div style="height:24px; border-radius:12px; overflow:hidden; display:flex;">
+            <div style="width:83%; background:var(--success); height:100%;"></div>
+            <div style="width:12%; background:var(--gold); height:100%;"></div>
+            <div style="width:3%; background:var(--wine); height:100%;"></div>
+            <div style="width:2%; background:var(--rose); height:100%;"></div>
+          </div>
+          <div style="margin-top:16px; display:flex; flex-wrap:wrap; gap:6px 0;">
+            <div style="display:inline-flex; align-items:center; gap:6px; margin-right:18px; font-size:13px; color:var(--ink-soft);">
+              <span style="width:10px; height:10px; border-radius:50%; display:inline-block; background:var(--success);"></span>
+              Delivered — 83%
+            </div>
+            <div style="display:inline-flex; align-items:center; gap:6px; margin-right:18px; font-size:13px; color:var(--ink-soft);">
+              <span style="width:10px; height:10px; border-radius:50%; display:inline-block; background:var(--gold);"></span>
+              In Transit — 12%
+            </div>
+            <div style="display:inline-flex; align-items:center; gap:6px; margin-right:18px; font-size:13px; color:var(--ink-soft);">
+              <span style="width:10px; height:10px; border-radius:50%; display:inline-block; background:var(--wine);"></span>
+              Processing — 3%
+            </div>
+            <div style="display:inline-flex; align-items:center; gap:6px; margin-right:18px; font-size:13px; color:var(--ink-soft);">
+              <span style="width:10px; height:10px; border-radius:50%; display:inline-block; background:var(--rose);"></span>
+              Cancelled — 2%
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3>Orders by Region</h3>
+        <div style="margin-top:16px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <span style="min-width:140px; font-size:13px; color:var(--ink-soft);">Maharashtra</span>
+            <div style="flex:1; height:10px; background:var(--ivory-2); border-radius:5px; overflow:hidden;">
+              <div style="width:24%; height:100%; background:var(--wine); border-radius:5px; transition:width 0.6s;"></div>
+            </div>
+            <span style="font-size:13px; font-weight:600; min-width:40px; text-align:right;">24%</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <span style="min-width:140px; font-size:13px; color:var(--ink-soft);">Karnataka</span>
+            <div style="flex:1; height:10px; background:var(--ivory-2); border-radius:5px; overflow:hidden;">
+              <div style="width:18%; height:100%; background:var(--gold); border-radius:5px; transition:width 0.6s;"></div>
+            </div>
+            <span style="font-size:13px; font-weight:600; min-width:40px; text-align:right;">18%</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <span style="min-width:140px; font-size:13px; color:var(--ink-soft);">Delhi NCR</span>
+            <div style="flex:1; height:10px; background:var(--ivory-2); border-radius:5px; overflow:hidden;">
+              <div style="width:16%; height:100%; background:var(--wine-light); border-radius:5px; transition:width 0.6s;"></div>
+            </div>
+            <span style="font-size:13px; font-weight:600; min-width:40px; text-align:right;">16%</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <span style="min-width:140px; font-size:13px; color:var(--ink-soft);">Tamil Nadu</span>
+            <div style="flex:1; height:10px; background:var(--ivory-2); border-radius:5px; overflow:hidden;">
+              <div style="width:14%; height:100%; background:var(--rose); border-radius:5px; transition:width 0.6s;"></div>
+            </div>
+            <span style="font-size:13px; font-weight:600; min-width:40px; text-align:right;">14%</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <span style="min-width:140px; font-size:13px; color:var(--ink-soft);">Gujarat</span>
+            <div style="flex:1; height:10px; background:var(--ivory-2); border-radius:5px; overflow:hidden;">
+              <div style="width:12%; height:100%; background:var(--success); border-radius:5px; transition:width 0.6s;"></div>
+            </div>
+            <span style="font-size:13px; font-weight:600; min-width:40px; text-align:right;">12%</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <span style="min-width:140px; font-size:13px; color:var(--ink-soft);">Others</span>
+            <div style="flex:1; height:10px; background:var(--ivory-2); border-radius:5px; overflow:hidden;">
+              <div style="width:16%; height:100%; background:var(--ink-soft); border-radius:5px; transition:width 0.6s;"></div>
+            </div>
+            <span style="font-size:13px; font-weight:600; min-width:40px; text-align:right;">16%</span>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>
+<script src="js/script.js"></script>
+
+</body>
+</html>

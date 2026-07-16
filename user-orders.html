@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders — Stackly Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" style="display:none;">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+  <div class="dash-shell">
+    <aside class="dash-sidebar" id="dashSidebar">
+      <a href="index.html" class="logo" style="display:block; text-align:center; margin-bottom:16px;">
+        <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img" style="max-width:140px; margin:0 auto;">
+      </a>
+      <button id="dashSidebarClose" class="dash-sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+      <div class="dash-profile">
+        <div class="dash-avatar">PS</div>
+        <h4>Priya Sharma</h4>
+        <span>Customer</span>
+      </div>
+      <nav class="dash-nav">
+        <a href="dashboard-user.html"><i class="fa-solid fa-grid-2"></i> Overview</a>
+        <a href="user-orders.html" class="active"><i class="fa-solid fa-box"></i> My Orders</a>
+        <a href="user-wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+        <a href="user-addresses.html"><i class="fa-solid fa-location-dot"></i> Addresses</a>
+        <a href="user-settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+      </nav>
+      <div class="dash-logout">
+        <a href="index.html" class="btn btn-outline btn-block" onclick="localStorage.removeItem('stackly_role')"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </div>
+    </aside>
+
+    <section class="dash-main">
+      <div class="dash-header-row reveal in-view">
+        <div>
+          <h2>My Orders</h2>
+          <p style="color:var(--ink-soft); font-size:14px; margin-top:4px;">Track and manage your orders.</p>
+        </div>
+      </div>
+
+      <section class="dash-panel reveal in-view">
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-box"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">12</span>
+              <span class="stat-label">Total Orders</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-check-circle"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Delivered</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">2</span>
+              <span class="stat-label">In Transit</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Processing</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3 style="margin-bottom:20px;">Active Orders</h3>
+        <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; margin-bottom:16px; background:var(--white);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <strong>#STK4821</strong>
+            <span class="status-pill status-transit">In Transit</span>
+          </div>
+          <p style="font-size:14px; margin:0 0 4px;">Velvet Oud Eau De Parfum (100ml)</p>
+          <p style="font-size:14px; font-weight:600; color:var(--wine); margin:0 0 12px;">₹2,899</p>
+          <div style="height:6px; background:var(--ivory-2); border-radius:3px; overflow:hidden;">
+            <div style="width:60%; height:100%; background:var(--wine); border-radius:3px;"></div>
+          </div>
+          <p style="font-size:12px; color:var(--ink-soft); margin-top:8px;">Shipped — Expected delivery: 18 Jul 2026</p>
+        </div>
+        <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; margin-bottom:16px; background:var(--white);">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+            <strong>#STK4819</strong>
+            <span class="status-pill status-pending">Processing</span>
+          </div>
+          <p style="font-size:14px; margin:0 0 4px;">Vitamin C Brightening Serum (30ml)</p>
+          <p style="font-size:14px; font-weight:600; color:var(--wine); margin:0 0 12px;">₹1,199</p>
+          <div style="height:6px; background:var(--ivory-2); border-radius:3px; overflow:hidden;">
+            <div style="width:25%; height:100%; background:var(--wine); border-radius:3px;"></div>
+          </div>
+          <p style="font-size:12px; color:var(--ink-soft); margin-top:8px;">Processing — Expected delivery: 22 Jul 2026</p>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3 style="margin-bottom:20px;">Order History</h3>
+        <div class="dash-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Item</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#STK4790</strong></td>
+                <td>Velvet Matte Lipstick</td>
+                <td>02 Jul 2026</td>
+                <td>₹649</td>
+                <td><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td><strong>#STK4755</strong></td>
+                <td>Argan Anti-Frizz Shampoo</td>
+                <td>24 Jun 2026</td>
+                <td>₹549</td>
+                <td><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td><strong>#STK4701</strong></td>
+                <td>Eau De Parfum, Velvet Oud</td>
+                <td>15 Jun 2026</td>
+                <td>₹2,899</td>
+                <td><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td><strong>#STK4688</strong></td>
+                <td>Hyaluronic Glow Serum</td>
+                <td>08 Jun 2026</td>
+                <td>₹1,199</td>
+                <td><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td><strong>#STK4652</strong></td>
+                <td>Charcoal Face Scrub</td>
+                <td>28 May 2026</td>
+                <td>₹399</td>
+                <td><span class="status-pill status-delivered">Delivered</span></td>
+              </tr>
+              <tr>
+                <td><strong>#STK4610</strong></td>
+                <td>9-Shade Eyeshadow Palette</td>
+                <td>15 May 2026</td>
+                <td>₹1,449</td>
+                <td><span class="status-pill status-cancelled">Cancelled</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3 style="margin-bottom:20px;">Need Help?</h3>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:200px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:24px; text-align:center; background:var(--white);">
+            <i class="fa-solid fa-rotate-left" style="font-size:28px; color:var(--wine);"></i>
+            <h4 style="margin:12px 0 6px; font-size:15px;">Return an Order</h4>
+            <p style="font-size:13px; color:var(--ink-soft); margin:0;">Initiate a return within 30 days of delivery</p>
+          </div>
+          <div style="flex:1; min-width:200px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:24px; text-align:center; background:var(--white);">
+            <i class="fa-solid fa-location-dot" style="font-size:28px; color:var(--gold);"></i>
+            <h4 style="margin:12px 0 6px; font-size:15px;">Track Package</h4>
+            <p style="font-size:13px; color:var(--ink-soft); margin:0;">Real-time tracking for your active shipments</p>
+          </div>
+          <div style="flex:1; min-width:200px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:24px; text-align:center; background:var(--white);">
+            <i class="fa-solid fa-headset" style="font-size:28px; color:var(--wine-light);"></i>
+            <h4 style="margin:12px 0 6px; font-size:15px;">Contact Support</h4>
+            <p style="font-size:13px; color:var(--ink-soft); margin:0;">Chat with our beauty experts 24/7</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist — Stackly Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" style="display:none;">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+  <div class="dash-shell">
+    <aside class="dash-sidebar" id="dashSidebar">
+      <a href="index.html" class="logo" style="display:block; text-align:center; margin-bottom:16px;">
+        <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img" style="max-width:140px; margin:0 auto;">
+      </a>
+      <button id="dashSidebarClose" class="dash-sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+      <div class="dash-profile">
+        <div class="dash-avatar">PS</div>
+        <h4>Priya Sharma</h4>
+        <span>Customer</span>
+      </div>
+      <nav class="dash-nav">
+        <a href="dashboard-user.html"><i class="fa-solid fa-grid-2"></i> Overview</a>
+        <a href="user-orders.html"><i class="fa-solid fa-box"></i> My Orders</a>
+        <a href="user-wishlist.html" class="active"><i class="fa-solid fa-heart"></i> Wishlist</a>
+        <a href="user-addresses.html"><i class="fa-solid fa-location-dot"></i> Addresses</a>
+        <a href="user-settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+      </nav>
+      <div class="dash-logout">
+        <a href="index.html" class="btn btn-outline btn-block" onclick="localStorage.removeItem('stackly_role')"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+      </div>
+    </aside>
+
+    <section class="dash-main">
+      <div class="dash-header-row reveal in-view">
+        <div>
+          <h2>My Wishlist</h2>
+          <p style="color:var(--ink-soft); font-size:14px; margin-top:4px;">Items you've saved for later.</p>
+        </div>
+        <a href="404.html" class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i> Continue Shopping</a>
+      </div>
+
+      <section class="dash-panel reveal in-view">
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-heart"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">18</span>
+              <span class="stat-label">Total Items</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-tag"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Price Drops</span>
+              <span class="stat-trend">&#8593; savings</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-xmark-circle"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Out of Stock</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">₹24,650</span>
+              <span class="stat-label">Total Value</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3 style="margin-bottom:20px;">Saved Items</h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:16px;">
+          <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white);">
+            <img src="Assets/Serum.webp" alt="Hyaluronic Glow Serum" style="height:120px; width:100%; object-fit:cover;">
+            <div style="padding:16px;">
+              <p style="font-size:14px; font-weight:700; margin:0;">Hyaluronic Glow Serum</p>
+              <p style="font-weight:600; color:var(--wine); margin:4px 0 0;">₹1,199</p>
+              <a href="404.html" class="btn btn-primary" style="width:100%; margin-top:10px; font-size:13px; text-decoration:none;"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</a>
+              <a href="404.html" style="width:100%; margin-top:6px; font-size:13px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:none; display:block; text-align:center;">Remove</a>
+            </div>
+          </div>
+          <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white);">
+            <img src="Assets/Nude_Lipstick.webp" alt="Velvet Matte Lipstick" style="height:120px; width:100%; object-fit:cover;">
+            <div style="padding:16px;">
+              <p style="font-size:14px; font-weight:700; margin:0;">Velvet Matte Lipstick</p>
+              <p style="font-weight:600; color:var(--wine); margin:4px 0 0;">₹649</p>
+              <a href="404.html" class="btn btn-primary" style="width:100%; margin-top:10px; font-size:13px; text-decoration:none;"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</a>
+              <a href="404.html" style="width:100%; margin-top:6px; font-size:13px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:none; display:block; text-align:center;">Remove</a>
+            </div>
+          </div>
+          <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white);">
+            <img src="Assets/Eau_De_Parfum.webp" alt="Velvet Oud Eau De Parfum" style="height:120px; width:100%; object-fit:cover;">
+            <div style="padding:16px;">
+              <p style="font-size:14px; font-weight:700; margin:0;">Velvet Oud Eau De Parfum</p>
+              <p style="font-weight:600; color:var(--wine); margin:4px 0 0;">₹2,899</p>
+              <a href="404.html" class="btn btn-primary" style="width:100%; margin-top:10px; font-size:13px; text-decoration:none;"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</a>
+              <a href="404.html" style="width:100%; margin-top:6px; font-size:13px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:none; display:block; text-align:center;">Remove</a>
+            </div>
+          </div>
+          <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white);">
+            <img src="Assets/Argan_Oil.webp" alt="Argan Anti-Frizz Shampoo" style="height:120px; width:100%; object-fit:cover;">
+            <div style="padding:16px;">
+              <p style="font-size:14px; font-weight:700; margin:0;">Argan Anti-Frizz Shampoo</p>
+              <p style="font-weight:600; color:var(--wine); margin:4px 0 0;">₹549</p>
+              <a href="404.html" class="btn btn-primary" style="width:100%; margin-top:10px; font-size:13px; text-decoration:none;"><i class="fa-solid fa-bag-shopping"></i> Add to Bag</a>
+              <a href="404.html" style="width:100%; margin-top:6px; font-size:13px; color:var(--ink-soft); background:none; border:none; cursor:pointer; text-decoration:none; display:block; text-align:center;">Remove</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3 style="margin-bottom:20px;">Price Drop Alerts</h3>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+          <div>
+            <p style="font-weight:700; margin:0 0 4px; font-size:14px;">Charcoal Face Scrub</p>
+            <p style="margin:0; font-size:13px;"><span style="text-decoration:line-through; color:var(--ink-soft);">₹499</span> <span style="color:var(--success); font-weight:600;">₹399</span></p>
+          </div>
+          <span class="status-pill status-delivered">-20%</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+          <div>
+            <p style="font-weight:700; margin:0 0 4px; font-size:14px;">Foaming Cleanser</p>
+            <p style="margin:0; font-size:13px;"><span style="text-decoration:line-through; color:var(--ink-soft);">₹699</span> <span style="color:var(--success); font-weight:600;">₹599</span></p>
+          </div>
+          <span class="status-pill status-delivered">-14%</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+          <div>
+            <p style="font-weight:700; margin:0 0 4px; font-size:14px;">Dewy Setting Spray</p>
+            <p style="margin:0; font-size:13px;"><span style="text-decoration:line-through; color:var(--ink-soft);">₹899</span> <span style="color:var(--success); font-weight:600;">₹749</span></p>
+          </div>
+          <span class="status-pill status-delivered">-17%</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0;">
+          <div>
+            <p style="font-weight:700; margin:0 0 4px; font-size:14px;">Beard Growth Oil</p>
+            <p style="margin:0; font-size:13px;"><span style="text-decoration:line-through; color:var(--ink-soft);">₹699</span> <span style="color:var(--success); font-weight:600;">₹599</span></p>
+          </div>
+          <span class="status-pill status-delivered">-14%</span>
+        </div>
+      </section>
+
+      <section class="dash-panel reveal in-view">
+        <h3 style="margin-bottom:20px;">Recently Viewed</h3>
+        <div style="display:flex; gap:16px; overflow-x:auto; padding-bottom:8px;">
+          <div style="min-width:160px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white); flex-shrink:0;">
+            <img src="Assets/Contour_Highlight_Kit.webp" alt="Contour & Highlight Kit" style="height:80px; width:100%; object-fit:cover;">
+            <div style="padding:12px;">
+              <p style="font-size:13px; margin:0; font-weight:600;">Contour & Highlight Kit</p>
+              <p style="font-size:13px; font-weight:600; color:var(--wine); margin:4px 0 0;">₹1,299</p>
+            </div>
+          </div>
+          <div style="min-width:160px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white); flex-shrink:0;">
+            <img src="Assets/Floral_Body_Mist.webp" alt="Floral Body Mist" style="height:80px; width:100%; object-fit:cover;">
+            <div style="padding:12px;">
+              <p style="font-size:13px; margin:0; font-weight:600;">Floral Body Mist</p>
+              <p style="font-size:13px; font-weight:600; color:var(--wine); margin:4px 0 0;">₹449</p>
+            </div>
+          </div>
+          <div style="min-width:160px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white); flex-shrink:0;">
+            <img src="Assets/Beard_care.webp" alt="Beard Balm" style="height:80px; width:100%; object-fit:cover;">
+            <div style="padding:12px;">
+              <p style="font-size:13px; margin:0; font-weight:600;">Beard Balm</p>
+              <p style="font-size:13px; font-weight:600; color:var(--wine); margin:4px 0 0;">₹349</p>
+            </div>
+          </div>
+          <div style="min-width:160px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); overflow:hidden; background:var(--white); flex-shrink:0;">
+            <img src="Assets/Dewy_Setting_Spray.webp" alt="Setting Spray" style="height:80px; width:100%; object-fit:cover;">
+            <div style="padding:12px;">
+              <p style="font-size:13px; margin:0; font-weight:600;">Setting Spray</p>
+              <p style="font-size:13px; font-weight:600; color:var(--wine); margin:4px 0 0;">₹749</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>
+<script src="js/script.js"></script>
+
+</body>
+</html>

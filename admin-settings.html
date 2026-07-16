@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings — Stackly Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" style="display:none;">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+    <div class="dash-shell">
+      <aside class="dash-sidebar" id="dashSidebar">
+        <a href="index.html" class="logo" style="display:block; text-align:center; margin-bottom:16px;">
+          <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img" style="max-width:140px; margin:0 auto;">
+        </a>
+        <button id="dashSidebarClose" class="dash-sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+        <div class="dash-profile">
+          <div class="dash-avatar">AK</div>
+          <h4>Arjun Kapoor</h4>
+          <span>Administrator</span>
+        </div>
+        <nav class="dash-nav">
+          <a href="dashboard-admin.html"><i class="fa-solid fa-grid-2"></i> Overview</a>
+          <a href="admin-products.html"><i class="fa-solid fa-box-open"></i> Manage Products</a>
+          <a href="admin-orders.html"><i class="fa-solid fa-receipt"></i> Manage Orders</a>
+          <a href="admin-customers.html"><i class="fa-solid fa-users"></i> Customers</a>
+          <a href="admin-settings.html" class="active"><i class="fa-solid fa-gear"></i> Settings</a>
+        </nav>
+        <div class="dash-logout">
+          <a href="index.html" class="btn btn-outline btn-block" onclick="localStorage.removeItem('stackly_role')"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+      </aside>
+
+      <section class="dash-main">
+        <div class="dash-header-row reveal in-view">
+          <h2>Settings</h2>
+          <p>Configure your store and account preferences.</p>
+        </div>
+
+        <div class="dash-panel reveal in-view">
+          <h3>Store Information</h3>
+          <div style="display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;">
+              <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--ink-soft);">Store Name</label>
+              <div style="padding:10px 14px; border:1px solid var(--ivory-2); border-radius:var(--radius-sm); background:var(--white); font-size:14px; flex:1; min-width:200px;">Stackly Beauty</div>
+            </div>
+            <div style="flex:1; min-width:200px;">
+              <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--ink-soft);">Store Email</label>
+              <div style="padding:10px 14px; border:1px solid var(--ivory-2); border-radius:var(--radius-sm); background:var(--white); font-size:14px; flex:1; min-width:200px;">admin@stacklybeauty.com</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:16px; margin-bottom:16px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px;">
+              <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--ink-soft);">Store Phone</label>
+              <div style="padding:10px 14px; border:1px solid var(--ivory-2); border-radius:var(--radius-sm); background:var(--white); font-size:14px; flex:1; min-width:200px;">+91 98765 43210</div>
+            </div>
+            <div style="flex:1; min-width:200px;">
+              <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:var(--ink-soft);">Business Address</label>
+              <div style="padding:10px 14px; border:1px solid var(--ivory-2); border-radius:var(--radius-sm); background:var(--white); font-size:14px; flex:1; min-width:200px;">42, MG Road, Bandra West, Mumbai 400050</div>
+            </div>
+          </div>
+          <a href="404.html" class="btn btn-primary" style="margin-top:8px; text-decoration:none;"><i class="fa-solid fa-check"></i> Save Changes</a>
+        </div>
+
+        <div class="dash-panel reveal in-view">
+          <h3>Payment Methods</h3>
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; flex:1; min-width:200px; text-align:center; background:var(--white);">
+              <i class="fa-solid fa-credit-card" style="font-size:28px; color:var(--wine);"></i>
+              <h4 style="margin:8px 0 4px;">Razorpay</h4>
+              <span class="status-pill status-delivered" style="margin-top:8px;">Active</span>
+            </div>
+            <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; flex:1; min-width:200px; text-align:center; background:var(--white);">
+              <i class="fa-solid fa-money-bill-wave" style="font-size:28px; color:var(--wine);"></i>
+              <h4 style="margin:8px 0 4px;">Stripe</h4>
+              <span class="status-pill status-delivered" style="margin-top:8px;">Active</span>
+            </div>
+            <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; flex:1; min-width:200px; text-align:center; background:var(--white);">
+              <i class="fa-solid fa-money-bill" style="font-size:28px; color:var(--wine);"></i>
+              <h4 style="margin:8px 0 4px;">Cash on Delivery</h4>
+              <span class="status-pill status-delivered" style="margin-top:8px;">Active</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal in-view">
+          <h3>Notification Preferences</h3>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+              <span style="font-size:14px;">New Order Alerts</span>
+              <span style="display:inline-block; width:44px; height:24px; border-radius:12px; background:var(--success); position:relative; cursor:pointer;" class="dash-toggle"><span style="position:absolute; top:2px; right:2px; width:20px; height:20px; border-radius:50%; background:white;"></span></span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+              <span style="font-size:14px;">Low Stock Warnings</span>
+              <span style="display:inline-block; width:44px; height:24px; border-radius:12px; background:var(--success); position:relative; cursor:pointer;" class="dash-toggle"><span style="position:absolute; top:2px; right:2px; width:20px; height:20px; border-radius:50%; background:white;"></span></span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+              <span style="font-size:14px;">Customer Reviews</span>
+              <span style="display:inline-block; width:44px; height:24px; border-radius:12px; background:var(--success); position:relative; cursor:pointer;" class="dash-toggle"><span style="position:absolute; top:2px; right:2px; width:20px; height:20px; border-radius:50%; background:white;"></span></span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+              <span style="font-size:14px;">Marketing Emails</span>
+              <span style="display:inline-block; width:44px; height:24px; border-radius:12px; background:var(--ivory-2); position:relative; cursor:pointer;" class="dash-toggle"><span style="position:absolute; top:2px; left:2px; width:20px; height:20px; border-radius:50%; background:white;"></span></span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0;">
+              <span style="font-size:14px;">Weekly Sales Report</span>
+              <span style="display:inline-block; width:44px; height:24px; border-radius:12px; background:var(--success); position:relative; cursor:pointer;" class="dash-toggle"><span style="position:absolute; top:2px; right:2px; width:20px; height:20px; border-radius:50%; background:white;"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-panel reveal in-view">
+          <h3>Security</h3>
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+              <span style="font-size:14px;"><i class="fa-solid fa-shield-halved" style="color:var(--wine); margin-right:8px;"></i> Two-Factor Authentication</span>
+              <span class="status-pill status-delivered">Enabled</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+              <span style="font-size:14px;"><i class="fa-solid fa-key" style="color:var(--wine); margin-right:8px;"></i> Last Password Change</span>
+              <span style="font-size:14px;">15 Jun 2026</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--ivory-2);">
+              <span style="font-size:14px;"><i class="fa-solid fa-display" style="color:var(--wine); margin-right:8px;"></i> Active Sessions</span>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:14px;">2 devices</span>
+                <a href="404.html" class="btn btn-outline" style="font-size:12px; padding:6px 12px; text-decoration:none;">Terminate All</a>
+              </div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0;">
+              <span style="font-size:14px;"><i class="fa-solid fa-lock" style="color:var(--wine); margin-right:8px;"></i> API Key</span>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <span style="font-size:14px; font-family:monospace;">sk_live_****...****8f2a</span>
+                <a href="404.html" class="btn btn-outline" style="font-size:12px; padding:6px 12px; text-decoration:none;">Regenerate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

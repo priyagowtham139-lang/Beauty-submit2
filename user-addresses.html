@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Addresses — Stackly Beauty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" style="display:none;">
+  <div class="header-container">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a href="index.html" class="logo">
+      <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img">
+    </a>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<main>
+    <div class="dash-shell">
+      <aside class="dash-sidebar" id="dashSidebar">
+        <a href="index.html" class="logo" style="display:block; text-align:center; margin-bottom:16px;">
+          <img src="Assets/stackly-logo-wine (1).webp" alt="Stackly Beauty" class="logo-img" style="max-width:140px; margin:0 auto;">
+        </a>
+        <button id="dashSidebarClose" class="dash-sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+        <div class="dash-profile">
+          <div class="dash-avatar">PS</div>
+          <h4>Priya Sharma</h4>
+          <span>Customer</span>
+        </div>
+        <nav class="dash-nav">
+          <a href="dashboard-user.html"><i class="fa-solid fa-grid-2"></i> Overview</a>
+          <a href="user-orders.html"><i class="fa-solid fa-box"></i> My Orders</a>
+          <a href="user-wishlist.html"><i class="fa-solid fa-heart"></i> Wishlist</a>
+          <a href="user-addresses.html" class="active"><i class="fa-solid fa-location-dot"></i> Addresses</a>
+          <a href="user-settings.html"><i class="fa-solid fa-gear"></i> Account Settings</a>
+        </nav>
+        <div class="dash-logout">
+          <a href="index.html" class="btn btn-outline btn-block" onclick="localStorage.removeItem('stackly_role')"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+        </div>
+      </aside>
+      <section class="dash-main">
+        <div class="dash-header-row reveal in-view">
+          <div>
+            <h1>My Addresses</h1>
+            <p>Manage your saved delivery addresses.</p>
+          </div>
+          <a href="404.html" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add New Address</a>
+        </div>
+        <div class="dash-panel reveal in-view">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <i class="fa-solid fa-location-dot"></i>
+              <h3>3</h3>
+              <p>Saved Addresses</p>
+            </div>
+            <div class="stat-card">
+              <i class="fa-solid fa-star"></i>
+              <h3>1</h3>
+              <p>Default</p>
+            </div>
+            <div class="stat-card">
+              <i class="fa-solid fa-city"></i>
+              <h3>2</h3>
+              <p>Cities</p>
+            </div>
+            <div class="stat-card">
+              <i class="fa-solid fa-map"></i>
+              <h3>2</h3>
+              <p>States</p>
+            </div>
+          </div>
+        </div>
+        <div class="dash-panel reveal in-view">
+          <h2>Default Delivery Address</h2>
+          <div style="border:2px solid var(--wine); border-radius:var(--radius-md); padding:24px; background:var(--white); position:relative;">
+            <span class="status-pill status-delivered" style="position:absolute; top:16px; right:16px;">Default</span>
+            <p><strong>Priya Sharma</strong></p>
+            <p style="margin:4px 0;">+91 98765 43210</p>
+            <p style="margin:4px 0;">42, Hill Road, Bandra West</p>
+            <p style="margin:4px 0;">Mumbai, Maharashtra — 400050</p>
+            <div style="margin-top:16px; display:flex; gap:8px;">
+              <a href="404.html" class="btn btn-outline" style="font-size:12px; padding:6px 14px; text-decoration:none;"><i class="fa-solid fa-pen"></i> Edit</a>
+              <a href="404.html" style="font-size:12px; padding:6px 14px; color:var(--rose); background:none; border:none; cursor:pointer; text-decoration:none;"><i class="fa-solid fa-trash"></i> Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="dash-panel reveal in-view">
+          <h2>Other Addresses</h2>
+          <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; margin-bottom:16px; background:var(--white);">
+            <p><strong>Priya Sharma</strong></p>
+            <p style="margin:4px 0;">+91 87654 32109</p>
+            <p style="margin:4px 0;">5th Floor, DLF Cyber City</p>
+            <p style="margin:4px 0;">Gurugram, Haryana — 122002</p>
+            <div style="margin-top:12px; display:flex; gap:8px;">
+              <a href="404.html" class="btn btn-outline" style="font-size:12px; padding:6px 14px; text-decoration:none;"><i class="fa-solid fa-pen"></i> Edit</a>
+              <a href="404.html" style="font-size:12px; padding:6px 14px; color:var(--rose); background:none; border:none; cursor:pointer; text-decoration:none;"><i class="fa-solid fa-trash"></i> Delete</a>
+            </div>
+          </div>
+          <div style="border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; margin-bottom:16px; background:var(--white);">
+            <p><strong>Rajesh Sharma (Father)</strong></p>
+            <p style="margin:4px 0;">+91 99887 76655</p>
+            <p style="margin:4px 0;">15, Anna Salai, T. Nagar</p>
+            <p style="margin:4px 0;">Chennai, Tamil Nadu — 600017</p>
+            <div style="margin-top:12px; display:flex; gap:8px;">
+              <a href="404.html" class="btn btn-outline" style="font-size:12px; padding:6px 14px; text-decoration:none;"><i class="fa-solid fa-pen"></i> Edit</a>
+              <a href="404.html" style="font-size:12px; padding:6px 14px; color:var(--rose); background:none; border:none; cursor:pointer; text-decoration:none;"><i class="fa-solid fa-trash"></i> Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="dash-panel reveal in-view">
+          <h2>Delivery Tips</h2>
+          <div style="display:flex; gap:16px; flex-wrap:wrap;">
+            <div style="flex:1; min-width:200px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; background:var(--white);">
+              <i class="fa-solid fa-circle-info" style="font-size:24px; color:var(--wine);"></i>
+              <p style="font-weight:bold; margin:10px 0 6px;">Ensure Accuracy</p>
+              <p style="font-size:13px; color:var(--ink-soft);">Double-check your pincode and landmark to avoid delivery delays.</p>
+            </div>
+            <div style="flex:1; min-width:200px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; background:var(--white);">
+              <i class="fa-solid fa-circle-info" style="font-size:24px; color:var(--wine);"></i>
+              <p style="font-weight:bold; margin:10px 0 6px;">Security</p>
+              <p style="font-size:13px; color:var(--ink-soft);">Add alternate phone numbers so our delivery partner can reach you easily.</p>
+            </div>
+            <div style="flex:1; min-width:200px; border:1px solid var(--ivory-2); border-radius:var(--radius-md); padding:20px; background:var(--white);">
+              <i class="fa-solid fa-circle-info" style="font-size:24px; color:var(--wine);"></i>
+              <p style="font-weight:bold; margin:10px 0 6px;">Business Addresses</p>
+              <p style="font-size:13px; color:var(--ink-soft);">For office deliveries, include floor and desk number for smooth handoff.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
